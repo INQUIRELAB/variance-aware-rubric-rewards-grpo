@@ -64,42 +64,6 @@ Both reward functions satisfy the four prerequisites for effective GRPO training
 
 The evaluation stage compares the GRPO-trained model against the unmodified Qwen3-14B base and several frontier models hosted via the Groq API: Kimi-K2, Llama-4-Scout-17B, Llama-4-Maverick-17B, Llama-3.3-70B, and GPT-OSS-120B. Each model generates responses to the held-out HealthBench heart-related prompts, and responses are scored against physician-written rubrics using the same criterion-level evaluation pipeline used during training. Metrics include accuracy, precision, recall, and F1.
 
-## Repository Structure
-
-```
-.
-├── Qwen3-8b (new)_v2.py           # Main training & evaluation pipeline
-├── grpo_reward_functions.py        # Reward function implementations
-├── heart_classifier.py             # Heart-related query classifier
-├── generate_synthetic_reasoning.py # Synthetic reasoning trace generator
-├── rar_aggregation_training.py     # RaR explicit/implicit aggregation
-├── ollama_call.py                  # Ollama API interface
-├── evaluation_animation.mp4        # Evaluation results animation
-├── paper/                          # Paper drafts and figures
-│   ├── iclr2026_conference.tex
-│   ├── grpo.tex
-│   ├── healthbench.tex
-│   └── reward_functions_explanation.md
-├── overleaf/                       # Main manuscript (npj Digital Medicine)
-│   ├── main_pro.tex
-│   ├── chapters/
-│   └── references.bib
-├── RaR-Medicine/                   # RaR-Medicine dataset (HuggingFace format)
-│   └── data/
-├── dataset/                        # HealthBench evaluation data
-│   ├── 2025-05-07-06-14-12_oss_eval.jsonl
-│   └── healthbench_with_synthetic_reasoning_*.jsonl
-└── rar-dataset-results/            # Training outputs and evaluation artifacts
-    ├── sft_saved_lora/             # SFT LoRA checkpoint
-    ├── grpo_saved_lora_hybrid/     # GRPO checkpoint (hybrid reward)
-    ├── grpo_saved_lora_complexity/ # GRPO checkpoint (complexity reward)
-    ├── evaluation_metrics_*.csv    # Evaluation results
-    ├── evaluation_raw_*.parquet    # Raw evaluation data
-    ├── grpo_rewards_*.parquet      # Training reward logs
-    ├── grpo_judging_*.log          # Detailed judge evaluation logs
-    └── *.jpg / *.pdf               # Visualization plots
-```
-
 ## Usage
 
 ### Prerequisites

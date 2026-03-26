@@ -1,11 +1,7 @@
 # Variance-Aware Rubric Rewards for Heart-Focused Medical QA with GRPO
 
 <p align="center">
-  <video src="evaluation_animation.mp4" autoplay loop muted playsinline width="800"></video>
-</p>
-
-<p align="center">
-  <a href="evaluation_animation.mp4">View evaluation animation</a>
+  <img src="evaluation_animation.gif" alt="Evaluation Animation" width="800">
 </p>
 
 ---
@@ -63,6 +59,15 @@ Both reward functions satisfy the four prerequisites for effective GRPO training
 ### Evaluation
 
 The evaluation stage compares the GRPO-trained model against the unmodified Qwen3-14B base and several frontier models hosted via the Groq API: Kimi-K2, Llama-4-Scout-17B, Llama-4-Maverick-17B, Llama-3.3-70B, and GPT-OSS-120B. Each model generates responses to the held-out HealthBench heart-related prompts, and responses are scored against physician-written rubrics using the same criterion-level evaluation pipeline used during training. Metrics include accuracy, precision, recall, and F1.
+
+<p align="center">
+  <video src="criteria_animation.mp4" autoplay loop muted playsinline width="800"></video>
+</p>
+
+<p align="center">
+  <a href="criteria_animation.mp4">▶️ View criteria animation</a>
+</p>
+
 
 ## Usage
 
@@ -149,3 +154,6 @@ If you use this code or methodology in your research, please cite:
 ## License
 
 Please refer to the individual dataset licenses for RaR-Medicine and HealthBench. The training code in this repository is provided for research purposes.
+
+---
+

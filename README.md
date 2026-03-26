@@ -61,11 +61,7 @@ Both reward functions satisfy the four prerequisites for effective GRPO training
 The evaluation stage compares the GRPO-trained model against the unmodified Qwen3-14B base and several frontier models hosted via the Groq API: Kimi-K2, Llama-4-Scout-17B, Llama-4-Maverick-17B, Llama-3.3-70B, and GPT-OSS-120B. Each model generates responses to the held-out HealthBench heart-related prompts, and responses are scored against physician-written rubrics using the same criterion-level evaluation pipeline used during training. Metrics include accuracy, precision, recall, and F1.
 
 <p align="center">
-  <video src="https://raw.githubusercontent.com/INQUIRELAB/variance-aware-rubric-rewards-grpo/main/criteria_animation.mp4" autoplay loop muted playsinline width="800"></video>
-</p>
-
-<p align="center">
-  <a href="https://raw.githubusercontent.com/INQUIRELAB/variance-aware-rubric-rewards-grpo/main/criteria_animation.mp4">▶️ View criteria animation</a>
+  <video src="criteria_animation.mp4" controls loop muted playsinline width="800"></video>
 </p>
 
 
